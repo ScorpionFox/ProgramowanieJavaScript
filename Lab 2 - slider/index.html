@@ -9,18 +9,68 @@
 </head>
 
 <body>
-    <div id="slider">
-        <div class="slides">
-        	<img src="photos/Atak.jpeg" alt="Atak">
-        	<img src="photos/Blok.jpg" alt="Atak">
-        	<img src="photos/Zagrywka.jpg" alt="Atak">
-        	<img src="photos/Przyjecie.png" alt="Atak">
-        	<img src="photos/Rozegranie.jpg" alt="Atak">
-        	<img src="photos/Obrona.jpg" alt="Atak">
+    <div class="nav-buttons">
+        <button id="prevBtn">Wstecz</button>
+        <button id="nextBtn">Dalej</button>
+    </div>
+    <div class="slider">
+        <div class="slides">           
+            <input type="radio" name="radio-button" id="radio1" checked>
+            <input type="radio" name="radio-button" id="radio2">
+            <input type="radio" name="radio-button" id="radio3">
+            <input type="radio" name="radio-button" id="radio4">
+            <input type="radio" name="radio-button" id="radio5">
+            <input type="radio" name="radio-button" id="radio6">
+
+            <div class="firstslide">
+                <img src="photos/Atak.jpeg" alt="Atak">
+            </div>
+            <div class="slide">
+                <img src="photos/Blok.jpg" alt="Blok">
+            </div>
+
+            <div class="slide">
+                <img src="photos/Zagrywka.jpg" alt="Zagrywka">
+            </div>
+
+            <div class="slide">
+                <img src="photos/Przyjecie.png" alt="Przyjecie">
+            </div>
+
+            <div class="slide">
+                <img src="photos/Rozegranie.jpg" alt="Rozegranie">
+            </div>
+
+            <div class="slide">
+                <img src="photos/Obrona.jpg" alt="Obrona">
+            </div>
+
+            <!-- Automatic Navigation -->
+            
+            <div class="nav-auto">
+                <div class="auto-button1"></div>
+                <div class="auto-button2"></div>
+                <div class="auto-button3"></div>
+                <div class="auto-button4"></div>
+                <div class="auto-button5"></div>
+                <div class="auto-button6"></div>
+            </div>
+            
+            <!-- Manual Navigation -->
+            <div class="nav-manual">
+                <label for="radio1" class="manual-button"></label>
+                <label for="radio2" class="manual-button"></label>
+                <label for="radio3" class="manual-button"></label>
+                <label for="radio4" class="manual-button"></label>
+                <label for="radio5" class="manual-button"></label>
+                <label for="radio6" class="manual-button"></label>
+            </div>
+
         </div>
     </div>
-    <main>
-    </main>
+  
+    <!-- <main>
+    </main> -->
     <script src="main.js"></script>
 </body>
 
