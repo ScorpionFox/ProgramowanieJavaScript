@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 3</title>
+</head>
+<body>
+    <span id="audio">
+        <audio src="./sounds/do.wav" controls id="s1"></audio>
+        <audio src="./sounds/re.wav" controls id="s2"></audio>
+        <audio src="./sounds/mi.wav" controls id="s3"></audio>
+        <audio src="./sounds/fa.wav" controls id="s4"></audio>
+        <audio src="./sounds/sol.wav" controls id="s5"></audio>
+        <audio src="./sounds/la.wav" controls id="s6"></audio>
+        <audio src="./sounds/si.wav" controls id="s7"></audio>
+    </span>
+
+<div id="container">
+    <div class="piano-key" data-key="a" onkeydown="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">DO <br> (A)</div>
+    </div>
+
+    <div class="piano-key" data-key="s" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">RE <br> (S)</div>
+    </div>
+
+    <div class="piano-key" data-key="d" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">MI <br> (D)</div>
+    </div>
+
+    <div class="piano-key" data-key="f" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">FA <br> (F)</div>
+    </div>
+
+    <div class="piano-key" data-key="g" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">SOL <br> (G)</div>
+    </div>
+
+    <div class="piano-key" data-key="h" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">LA <br> (H)</div>
+    </div>
+
+    <div class="piano-key" data-key="j" onclick="buttonPressed(this)">
+        <div class="piano-blackkey"></div>
+        <div class="piano-label">SI <br> (J)</div>
+    </div>
+</div>
+
+<div>
+    <button id="startRecord">Start Recording</button>
+    <button id="stopRecord" disabled>Stop Recording</button>
+    <button id="playRecord" disabled>Play Recording</button>
+</div>
+
+
+    <script src="drumkit.js"></script>
+</body> 
+</html>
