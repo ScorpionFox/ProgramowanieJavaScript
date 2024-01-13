@@ -17,6 +17,7 @@
         <audio src="./sounds/si.wav" controls id="s7"></audio>
     </span>
 
+<div id="header"><button class="header">Lab 3 🎹</button></div>
 <div id="container">
     <div class="piano-key" data-key="a" onkeydown="buttonPressed(this)">
         <div class="piano-blackkey"></div>
@@ -51,13 +52,21 @@
     <div class="piano-key" data-key="j" onclick="buttonPressed(this)">
         <div class="piano-blackkey"></div>
         <div class="piano-label">SI <br> (J)</div>
-    </div>
+    </div> 
 </div>
 
-<div>
+<div id="buttons-container">
     <button id="startRecord">Start Recording</button>
     <button id="stopRecord" disabled>Stop Recording</button>
     <button id="playRecord" disabled>Play Recording</button>
+</div>
+
+<div id="channelButtons">
+    <label><input type="radio" name="channel" value="a" onclick="setActiveChannel('a')" checked class="styled-radio"> Channel 1</label>
+    <label><input type="radio" name="channel" value="s" onclick="setActiveChannel('s')" class="styled-radio"> Channel 2</label>
+    <label><input type="radio" name="channel" value="d" onclick="setActiveChannel('d')" class="styled-radio"> Channel 3</label>
+    <label><input type="radio" name="channel" value="f" onclick="setActiveChannel('f')" class="styled-radio"> Channel 4</label>
+    <label><input type="radio" name="channel" value="all" onclick="setActiveChannel('all')" class="styled-radio"> All</label>
 </div>
 
 

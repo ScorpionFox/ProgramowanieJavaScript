@@ -1,8 +1,90 @@
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+#header{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+.header {
+    align-items: center;
+    background-color: #009688; 
+    background-image: linear-gradient(#4CAF50, #009688);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    color: #fff; 
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 38px; 
+    height: 52px; 
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 280px;
+    height: 120px;
+    transition: 0.5s;
+  }
+  
+  .header:hover {
+    box-shadow: rgba(208, 3, 3, 0.2) 0 2px 8px;
+    opacity: 0.85;
+    color: #d00303;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+  
+  .header:active {
+    outline: 0;
+  }
+  
+  .header:focus {
+    box-shadow: rgba(47, 97, 235, 0.5) 0 0 0 3px;
+    color: #2F61EB;
+    font-weight: bold;
+  }
 #container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom:20px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#buttons-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+#startRecord, #stopRecord, #playRecord{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .piano-key {
@@ -39,6 +121,25 @@
     }
 }
 
+#channelButtons{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    font-weight:bold;
+    font-size: 30px;
+}
+
+.styled-radio {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 50%; 
+    cursor: pointer;
+}
 
 .piano-blackkey {
     border: solid 1px black;
