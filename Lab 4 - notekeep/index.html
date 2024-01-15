@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/inputs.css">
+    <link rel="stylesheet" href="styles/notes.css">
+    <title>Lab 4 📝</title>
+</head>
+
+<body>
+    <div id="header">
+        <button class="header">Lab 4 📝</button>
+    </div>
+
+    <div class="formContainer">
+        <form id="noteForm">
+            <label for="title">✒️ Tytuł:</label> <br>
+            <input type="text" id="title"  class="inputs" placeholder="Tu podaj tytuł notatki" required>
+            <br>
+
+            <label for="content">📜 Treść:</label> <br>
+            <textarea type="text" id="content" class="inputs" maxlength="300" required></textarea> <br>
+
+            <div class="cc">
+                <label for="color">Kolor:<span style="visibility: hidden;">xxx</span></label>
+                <input type="color" id="color"  value="#90EE90">
+            </div>
+
+            <div class="checkbox-wrapper">
+                <span id="span">Przypiąć?</span>
+                <input type="checkbox" id="pin">
+                <label for="pin">
+                    <span class="check-box"></span>
+                </label>
+            </div>
+            <label for="tags">⚓ Tagi:</label> <br>
+            <input type="text" id="tags" class="inputs" placeholder="Tu podaj tagi" required> <br>
+
+          <a class="buttonsubmit" onclick="addNote()">✅ Utwórz notatkę</a>
+        </form>
+
+        <div id="notesContainer" class="notesContainer"></div>
+
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

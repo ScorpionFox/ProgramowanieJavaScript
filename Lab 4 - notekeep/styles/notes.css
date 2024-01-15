@@ -1,0 +1,60 @@
+.notesContainer {
+    background-color: #f7797d;
+    width: 1400px;
+    height: 670px;
+    max-height: 900px;
+    display: flex;
+    flex-direction: inline block;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 50px;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.note {
+    width: calc(33.33%);
+    min-width: 250px;
+    max-width: 350px;
+    max-height: 400px;
+    border: 3px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: auto;
+}
+
+.notelabels {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.notepin {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    background-color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.notecontent {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: pre-line;
+    word-wrap: break-word;
+}

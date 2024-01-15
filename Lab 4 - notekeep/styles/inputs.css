@@ -1,0 +1,43 @@
+.inputs {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(198, 239, 253);
+    color: black;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-wrapper input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-wrapper .check-box {
+    width: 34px;
+    height: 34px;
+    border: calc(40px * 0.1) solid #000;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked+label .check-box {
+    background-color: #37e443;
+    color: white;
+    transition: 0.5s;
+}

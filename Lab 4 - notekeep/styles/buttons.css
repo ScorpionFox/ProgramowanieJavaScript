@@ -1,0 +1,122 @@
+.buttonsubmit {
+    margin-top: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, rgb(255, 7, 7) -4.5%, rgb(255, 255, 5) 98.8%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.buttonsubmit:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.buttonsubmit:active {
+    transform: scale(0.95);
+}
+
+.buttondelete {
+    margin-top: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #19a3f0;
+    background-image: linear-gradient(45deg, rgb(95, 79, 236) -4.5%, rgb(223, 11, 110) 98.8%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.buttondelete:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.buttondelete:active {
+    transform: scale(0.95);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.header {
+    align-items: center;
+    background-color: #f044f0;
+    background-image: linear-gradient(#ec4b4b, #8bd415);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 38px;
+    font-weight: bold;
+    height: 52px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 280px;
+    height: 120px;
+    transition: 0.5s;
+}
+
+.header:hover {
+    box-shadow: rgba(208, 3, 3, 0.2) 0 2px 8px;
+    opacity: 0.85;
+    color: #6d03d0;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.header:active {
+    outline: 0;
+}
+
+.header:focus {
+    box-shadow: rgba(47, 97, 235, 0.5) 0 0 0 3px;
+    color: #2F61EB;
+    font-weight: bold;
+}
