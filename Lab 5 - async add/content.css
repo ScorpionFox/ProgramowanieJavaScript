@@ -29,7 +29,7 @@ body{
 .results {
     width: 25%;
     height: 375px;
-    background-color: lime;
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
 }
 
 .h, .results {
