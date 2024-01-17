@@ -1,0 +1,106 @@
+ body{
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+ }
+ .content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh; 
+    overflow-y: auto; 
+    margin: auto;
+ }
+ .code,.results {
+    width: 70%;
+    white-space: pre-line;
+    margin: auto;
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    border-radius: 15px;
+    height: 80vh;
+    overflow-y: auto;
+  }
+  .code{
+    font-family: 'Fira Code', monospace;
+    color:white
+  }
+  .results{
+    width: 25%;
+    height:375px;
+  }
+  
+.h,.results{
+    font-weight: bold;
+    font-size: 25px;
+    color:red;
+    text-align: center;
+}
+
+.results{
+    background-color: lime;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+#sum, #time, #counts{
+    font-size:20px;
+    color:rgb(255, 82, 82);
+}
+
+.header {
+    align-items: center;
+    background-color: #44f0c5;
+    background-image: linear-gradient(#20fdc6, #f91842);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 38px;
+    font-weight: bold;
+    height: 52px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 280px;
+    height: 120px;
+    transition: 0.5s;
+}
+
+.header:hover {
+    box-shadow: rgba(38, 251, 27, 0.2) 0 2px 8px;
+    opacity: 0.85;
+    color: #6d03d0;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.header:active {
+    outline: 0;
+}
+
+.header:focus {
+    box-shadow: rgba(253, 9, 94, 0.5) 0 0 0 3px;
+    color: #2302f9;
+    font-weight: bold;
+}
+

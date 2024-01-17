@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4.2.0/css/fira-code.css">
+  <title>Lab 5 🖥️💹</title>
+</head>
+
+<div>
+  <div id="header">
+    <button class="header">Lab 5 🖥️💹</button>
+</div>
+<div class="content">
+<div class="code">
+  <span class="h">Kod:</span>
+  <span class="comment">// Funkcja dodawania dwóch liczb</span>
+  function asyncAdd(a, b) {
+  return new Promise((resolve) => {
+  setTimeout(() => {
+  resolve(a + b);
+  }, 100);
+  });
+  }
+
+  <span class="comment">// Funkcja dodawania dowolnej ilości liczb asynchronicznie</span>
+  async function addNumbersAsync(...numbers) {
+  let sum = 0;
+
+  for (const num of numbers) {
+  sum = await asyncAdd(sum, num);
+  }
+
+  return sum;
+  }
+
+  <span class="comment">// Funkcja mierząca czas wykonania</span>
+  async function measureExecutionTimeAsync(func, ...args) {
+  const startTime = performance.now();
+  const result = await func(...args);
+  const endTime = performance.now();
+  const executionTime = endTime - startTime;
+
+  console.log(`Pomiar czasu wykonania zakończony.`);
+  console.log(`Czas wykonania: ${executionTime} ms`);
+  console.log(`Wartość sumy obecnej: ${result}`);
+
+  return { result, executionTime };
+  }
+
+  <span class="comment">// Testowanie dla zbioru danych o wielkości 100 elementów</span>
+  const data = Array.from({ length: 100 }, (_, index) => index + 1);
+
+  <span class="comment">// Zoptymalizowana funkcja dodająca dla zbioru danych</span>
+  async function addNumbersOptimizedAsync(...numbers) {
+  const promises = numbers.map(async (num) => {
+  const result = await asyncAdd(0, num);
+  console.log(`Dodawana liczba ${num}`);
+  return result;
+  });
+
+  const results = await Promise.all(promises);
+  const sum = results.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+  console.log(`Wartość sumy po wszystkich iteracjach: ${sum}`);
+  return sum;
+  }
+
+  <span class="comment">// Do wyświetlenia wyników w HTML</span>
+  const timeElement = document.getElementById("time");
+  const countsElement = document.getElementById("counts");
+  const sumElement = document.getElementById("sum");
+
+  <span class="comment">// Funkcja mierząca czas wykonania</span>
+  measureExecutionTimeAsync(addNumbersOptimizedAsync, ...data)
+    .then(({ result, executionTime }) => {
+      console.log(`Wynik dodawania: ${result}`);
+      console.log(`Czas wykonania: ${executionTime} ms`);
+      console.log(`Ilość operacji asynchronicznych: ${data.length}`);
+
+      <span class="comment">// Aktualizacja zawartości</span>
+      sumElement.textContent = `${result}`;
+      timeElement.textContent = `${executionTime} ms`;
+      countsElement.textContent = `${data.length}`;
+    })
+    .catch((error) => {
+      console.error("Wystąpił błąd:", error);
+    });
+
+  </div>
+  <div class="results">
+    Wynik dodawania:<br>
+    <span id="sum"></span><br>
+    Czas trwania operacji:<br>
+    <span id="time"></span><br>
+  Liczba operacji asynchronicznych:  <br>
+  <span id="counts"> </span>
+  </div>
+</div>
+  <script src="async-add.js" type="module"></script>
+</body>
+
+</html>
