@@ -8,21 +8,14 @@ function interval(something, updateFunction) {
   }, 2000);
 }
 
-// Logger class to log data to the console and return the logged data
-class Logger {
-  static log(data) {
-    console.log(data);
-    return data;
-  }
-}
-
 // Function to save data to session storage, log to the console, and return the logged data
-function saveCToSessionStorage(data) {
+function saveCToSessionStorage(data, loggerFunction, updateFunction) {
   console.log("[reader C]", data);
   const storageData = { data };
   sessionStorage.setItem("C", JSON.stringify(storageData));
-  const logData = Logger.log(`${data}`);
-  return logData;
+  loggerFunction(`[log from C] ${data}`);
+  updateFunction(data);
+  return data;
 }
 
 // Function to generate a random powerball number based on the input data
@@ -32,18 +25,26 @@ function discoverPowerBallNumber(data) {
   return number;
 }
 
+// Logger class to log data to the console
+class Logger {
+  static log(data) {
+    console.log(data);
+  }
+}
+
 // Update in HTML
 function updateReaderCResult(data) {
   document.getElementById("readerCResult").innerText = data;
 }
+
 function updateLogFromC(data) {
   document.getElementById("logFromC").innerText = data;
 }
+
 function updatePowerballNumber(data) {
   document.getElementById("powerballNumber").innerText = data;
 }
 
 // Execute intervals for different functions
-interval(saveCToSessionStorage, updateReaderCResult);
+interval((timer) => saveCToSessionStorage(timer, Logger.log, updateLogFromC), updateReaderCResult);
 interval(discoverPowerBallNumber, updatePowerballNumber);
-interval((timer) => ` ${timer}`, updateLogFromC);
