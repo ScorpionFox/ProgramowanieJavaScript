@@ -1,0 +1,103 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.header {
+  align-items: center;
+  background-color: #2f61eb;
+  background-image: linear-gradient(#0e5bef, #14d4e3);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 38px;
+  font-weight: bold;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 280px;
+  height: 120px;
+  transition: 0.5s;
+}
+
+.header:hover {
+  box-shadow: rgba(47, 97, 235, 0.2) 0 2px 8px;
+  opacity: 0.85;
+  color: #14d4e3;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.header:active {
+  outline: 0;
+}
+
+.header:focus {
+  box-shadow: rgba(47, 97, 235, 0.5) 0 0 0 3px;
+  color: #2f61eb;
+  font-weight: bold;
+}
+
+.delete-button {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  display: inline-block;
+  border: 0px;
+  font-weight: 700;
+  background-image: linear-gradient(
+    45deg,
+    #ffd700 -4.5%,
+    #ffa500 16.5%,
+    #ff6347 33%,
+    #00fa9a 52%,
+    #00ced1 68%,
+    #87ceeb 98.8%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.7s;
+  margin: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.delete-button:hover {
+  background-position: right center;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}

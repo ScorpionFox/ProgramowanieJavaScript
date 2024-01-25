@@ -1,0 +1,66 @@
+
+.weathernote {
+  width: 320px;
+  height: 550px;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  overflow-y: auto;
+  background-color: lightblue;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-image: linear-gradient(to top, rgba(255, 0, 0, 1), rgba(255, 255, 0, 1), rgba(0, 255, 0, 1));
+  border-image-slice: 1; 
+  border-image-width: 4px; 
+}
+.image {
+  width: 75px;
+  height: 75px;
+}
+
+.city {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.temp {
+  font-size: 2em;
+  color: #ff5733; 
+}
+
+.min_max_temp {
+  font-size: 1em;
+  color: #666; 
+}
+
+.weather {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #337ab7; 
+}
+
+.weather_image {
+  max-width: 100%;
+  height: auto;
+  margin-top:-10px;
+}
+
+.weather_desc {
+  font-size: 1em;
+  font-weight: bolder;
+  color: #333; 
+}
+
+.wind_dir_speed {
+  font-size: 1em;
+  color: #2da2c5;
+  margin-bottom: 10px; 
+}
+
+
